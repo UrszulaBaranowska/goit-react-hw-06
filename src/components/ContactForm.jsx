@@ -23,6 +23,7 @@ const ContactForm = () => {
       initialValues={{ name: "", number: "" }}
       validationSchema={validationSchema}
       onSubmit={(values, { resetForm }) => {
+        console.log("Adding contact:", values);
         dispatch(addContact(values));
         resetForm();
       }}
